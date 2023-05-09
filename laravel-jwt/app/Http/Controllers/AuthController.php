@@ -28,8 +28,6 @@ class AuthController extends Controller
             $user->save();
             session(['_token' => $token]);
             return view('admin.dashboard.index');
-
-//            return redirect('http://127.0.0.1:8000/dashboard');
         }
 
     }
