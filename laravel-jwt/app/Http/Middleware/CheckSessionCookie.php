@@ -9,7 +9,7 @@ class CheckSessionCookie
     public function handle(Request $request, Closure $next)
     {
         if (!$request->hasSession()) {
-            return redirect('http://127.0.0.1:8001/login?returnUrl=' . urlencode($request->url()));
+            return redirect('http://127.0.0.1:8000/login');
         }
 
         return $next($request);
