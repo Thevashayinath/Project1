@@ -22,8 +22,11 @@
                     'Authorization': 'Bearer ' + '{{ csrf_token() }}'
                 },
                 success: function(response) {
+                    debugger
+                    // window.location.href = response.redirectURL;
                 },
                 error: function(xhr) {
+                    debugger
                 }
             });
         });

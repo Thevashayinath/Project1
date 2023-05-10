@@ -27,8 +27,7 @@ class AuthController extends Controller
             $user->remember_token = $token;
             $user->save();
             session(['_token' => $token]);
-            return view('admin.dashboard.index');
+            return redirect()->route('dashboard');
         }
-
     }
 }
